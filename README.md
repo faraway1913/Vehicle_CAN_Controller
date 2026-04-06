@@ -37,19 +37,22 @@
 
 ```
 Vehicle_Domain_Controller_Simulator/
-├── STM32F407_AutoEnvDAQ/          # Master 工程（Keil MDK）
+├── README.md                        # 项目说明文档
+├── .gitignore                      # Git 忽略规则
+├── STM32F407_AutoEnvDAQ/           # Master 工程（Keil MDK）
 │   └── Core/
 │       └── Src/
-│           ├── freertos.c         # 核心业务逻辑（任务定义、CAN发送、ADC采集）
-│           ├── can.c              # CAN 外设初始化
-│           └── aht20.c            # AHT20 温湿度驱动
-├── STM32F103_CAN_Slave_Template/  # Slave 工程（Keil MDK）
+│           ├── freertos.c           # 核心业务逻辑（任务定义、CAN发送、ADC采集）
+│           ├── can.c                # CAN 外设初始化
+│           └── aht20.c             # AHT20 温湿度驱动
+├── STM32F103_CAN_Slave_Template/   # Slave 工程（Keil MDK）
 │   └── Core/
 │       └── Src/
-│           ├── freertos.c         # CAN 接收回调、串口打印
-│           ├── can.c              # CAN 外设初始化（PB8/PB9重映射）
-│           └── main.c             # 过滤器配置、CAN启动
-└── DevelopmentRecord/             # 开发记录文档
+│           ├── freertos.c          # CAN 接收回调、串口打印
+│           ├── can.c               # CAN 外设初始化（PB8/PB9重映射）
+│           └── main.c              # 过滤器配置、CAN启动
+└── DevelopmentRecord/              # 开发记录文档
+    └── 2026-04-06_车载CAN总线双机通信开发记录.md  # 完整踩坑记录与开发过程
 ```
 
 ## 快速开始
@@ -106,10 +109,15 @@ Vehicle_Domain_Controller_Simulator/
 
 ## 踩坑记录
 
-完整的踩坑记录和技术细节请参考 [DevelopmentRecord/](DevelopmentRecord/) 目录下的文档，包括：
+完整的踩坑记录和技术细节请参考 [DevelopmentRecord/2026-04-06_车载CAN总线双机通信开发记录.md](DevelopmentRecord/2026-04-06_车载CAN总线双机通信开发记录.md)，包含：
 
-- [传感器集成阶段完成总结.md](DevelopmentRecord/2026-03-11_传感器集成阶段完成总结.md) — ADC + I2C 阶段
-- [CAN总线联调完成记录.md](DevelopmentRecord/2026-04-06_CAN总线联调完成记录.md) — CAN 通信全流程记录（含14个踩坑点和调试方法）
+- 按日期组织的开发过程（2026-03-10 ~ 2026-04-06）
+- 12个踩坑点完整记录
+- VSCode + CubeMX + Keil 协作流程
+- Nano DLA 逻辑分析仪 + PulseView 使用说明
+- CAN 波特率配置详解
+- FreeRTOS 任务架构与互斥锁配置
+- 面试相关知识点清单
 
 ### 核心踩坑点
 
