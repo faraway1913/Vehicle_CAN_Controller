@@ -1,0 +1,29 @@
+# Keil MDK 编译产物
+*.axf
+*.hex
+*.elf
+*.map
+*.lst
+*.d
+*.o
+*.dep
+*.lnp
+*.htm
+*.build_log.htm
+*.xml
+
+# 调试符号
+*.pdb
+*.idb
+*.pfi
+
+# CubeMX 中间文件
+*.ioc.bak
+*_generate*
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# FreeRTOS heap相关
+*.heap*
