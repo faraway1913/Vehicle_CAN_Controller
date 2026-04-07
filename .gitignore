@@ -27,3 +27,12 @@ Thumbs.db
 
 # FreeRTOS heap相关
 *.heap*
+
+# .omc 目录 (Claude Code 会话缓存)
+.omc/
+
+#.claude 目录
+.claude/
+
+# .vscode 目录
+.vscode/
